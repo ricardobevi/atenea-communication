@@ -3,8 +3,6 @@ package org.squadra.atenea.ateneacommunication;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
-import org.squadra.atenea.ateneacommunication.Message;
-
 /**
  * Esta clase es el webservice que expone los metodos que se utilizan desde 
  * AteneaClient
