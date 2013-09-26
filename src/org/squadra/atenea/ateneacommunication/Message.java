@@ -1,5 +1,6 @@
 package org.squadra.atenea.ateneacommunication;
 
+import java.util.Date;
 import java.util.HashMap;
 
 import lombok.Getter;
@@ -30,6 +31,9 @@ public class Message {
 	/** Variable para guardar la orden de ejecucion de acciones del servidor al cliente */
 	@Getter @Setter private String order = "";
 	
+	/** Fecha de creacion del mensaje */
+	@Getter @Setter private Date date;
+	
 	/** HashMap para almacenar metadata que se enviara junto al mensaje (ej: usuario y clave) */
 	@Getter @Setter private HashMap<String, String> metadata;
 	
@@ -37,6 +41,7 @@ public class Message {
 	 * Constructor por defecto. Debe estar OBLIGATORIAMENTE para que funcione el web service.
 	 */
 	public Message() {
+		this.date = new Date();
 		this.metadata = new HashMap<String, String>();
 	}
 	
@@ -46,6 +51,7 @@ public class Message {
 	 */
 	public Message(String text) {
 		this.text = text;
+		this.date = new Date();
 		this.metadata = new HashMap<String, String>();
 	}
 	
@@ -57,6 +63,7 @@ public class Message {
 	public Message(String text, int type) {
 		this.text = text;
 		this.type = type;
+		this.date = new Date();
 		this.metadata = new HashMap<String, String>();
 	}
 	
