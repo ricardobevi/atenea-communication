@@ -18,7 +18,7 @@ public class Message {
 	public static final int ASSERTION = 1;
 	public static final int QUESTION = 2;
 	public static final int ORDER = 3;
-	public static final int INTERJECTION = 4;
+	public static final int DIALOG = 4;
 	public static final int ERROR = 5;
 	public static final int UNKNOWN = 6;
 	
