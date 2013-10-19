@@ -23,6 +23,7 @@ public class Message {
 	public static final int ERROR = 5;
 	public static final int UNKNOWN = 6;
 	public static final int STORE_ACTION = 7;
+	public static final int LEARN_ACTION = 8;
 	
 	/** Variable para guardar el mensaje de texto de entrada o el mensaje de salida a reproducir */
 	@Getter @Setter private String text = "";
