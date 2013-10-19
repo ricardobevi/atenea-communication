@@ -40,7 +40,7 @@ public class Message {
 	@Getter @Setter private HashMap<String, String> metadata;
 	
 	/** Lista de iconos a ejecutar */
-	@Getter private ArrayList<String> icons; 
+	@Getter private ArrayList<String> icons = new  ArrayList<String>(); 
 	
 	/**
 	 * Constructor por defecto. Debe estar OBLIGATORIAMENTE para que funcione el web service.
