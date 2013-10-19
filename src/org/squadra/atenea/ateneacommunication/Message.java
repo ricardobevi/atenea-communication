@@ -1,5 +1,6 @@
 package org.squadra.atenea.ateneacommunication;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -21,6 +22,7 @@ public class Message {
 	public static final int DIALOG = 4;
 	public static final int ERROR = 5;
 	public static final int UNKNOWN = 6;
+	public static final int STORE_ACTION = 7;
 	
 	/** Variable para guardar el mensaje de texto de entrada o el mensaje de salida a reproducir */
 	@Getter @Setter private String text = "";
@@ -36,6 +38,9 @@ public class Message {
 	
 	/** HashMap para almacenar metadata que se enviara junto al mensaje (ej: usuario y clave) */
 	@Getter @Setter private HashMap<String, String> metadata;
+	
+	/** Lista de iconos a ejecutar */
+	@Getter private ArrayList<String> icons; 
 	
 	/**
 	 * Constructor por defecto. Debe estar OBLIGATORIAMENTE para que funcione el web service.
@@ -75,5 +80,9 @@ public class Message {
 		return this.metadata.get(key);
 	}
 	
+	public void setIcon(String icon)
+	{
+		icons.add(icon);
+	}
 	
 }
