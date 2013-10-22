@@ -24,6 +24,7 @@ public class Message {
 	public static final int UNKNOWN = 6;
 	public static final int STORE_ACTION = 7;
 	public static final int LEARN_ACTION = 8;
+	public static final int PRELOAD_ACTION = 9;
 	
 	/** Variable para guardar el mensaje de texto de entrada o el mensaje de salida a reproducir */
 	@Getter @Setter private String text = "";
@@ -41,7 +42,7 @@ public class Message {
 	@Getter @Setter private HashMap<String, String> metadata;
 	
 	/** Lista de iconos a ejecutar */
-	@Getter private ArrayList<String> icons = new  ArrayList<String>(); 
+	@Getter @Setter private ArrayList<String> icons; 
 	
 	/**
 	 * Constructor por defecto. Debe estar OBLIGATORIAMENTE para que funcione el web service.
@@ -49,6 +50,7 @@ public class Message {
 	public Message() {
 		this.date = new Date();
 		this.metadata = new HashMap<String, String>();
+		this.icons = new ArrayList<String>();
 	}
 	
 	/**
@@ -59,6 +61,7 @@ public class Message {
 		this.text = text;
 		this.date = new Date();
 		this.metadata = new HashMap<String, String>();
+		this.icons = new ArrayList<String>();
 	}
 	
 	/**
@@ -71,6 +74,7 @@ public class Message {
 		this.type = type;
 		this.date = new Date();
 		this.metadata = new HashMap<String, String>();
+		this.icons = new ArrayList<String>();
 	}
 	
 	public void addMetadata (String key, String value) {
