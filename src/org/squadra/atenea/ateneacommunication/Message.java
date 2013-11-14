@@ -25,6 +25,7 @@ public class Message {
 	public static final int STORE_ACTION = 7;
 	public static final int LEARN_ACTION = 8;
 	public static final int PRELOAD_ACTION = 9;
+	public static final int REMOVE_ACTION = 10;
 	
 	/** Variable para guardar el mensaje de texto de entrada o el mensaje de salida a reproducir */
 	@Getter @Setter private String text = "";
